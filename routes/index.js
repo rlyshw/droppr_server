@@ -15,7 +15,7 @@ router.post('/',function(req,res,next){
   }).on('end', function() {
     buffer.end();
     var bind = (process.env.ADDR || "localhost")+":"+(process.env.PORT || 3000);
-    res.send(bind+'/droppr/'+req.query.name)
+    res.send("http://"+bind+'/droppr/'+req.query.name)
   });
 })
 
